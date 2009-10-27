@@ -1,0 +1,65 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h2>Localizame</h2>
+		A sample application that allows you to locate an user of Localizame service through an HTTP interface. It demonstrates:
+		<ul>
+			<li>Localizame API</li>
+		</ul>
+		<center>
+			<table width=200 height=50 bgcolor="#ffd760">
+				<tr>
+					<td align=center><font color="#dd8f52"><a href="../../samples/LocalizameExample.zip">Download Sample</a></font></td>
+				</tr>
+			</table>
+		</center>
+		<br><br>
+		
+		In the src/ClientAppUI.cpp you would find the following lines than are the parameters for the Login in Localizame example,
+		 you can change the parameters at your will.<br><br>
+		<center>
+			<table bgcolor="#ffd760">
+				<tr>
+					<td align=left>
+					// loggin in Localizame platform<br>
+					_LIT8(klogin8, "655522555");<br>
+					_LIT8(kpsw8, "password");<br>
+					_LIT8(kAutorice, "655522555");<br>
+					_LIT8(kLocate, "655522555");<br>
+					_LIT8(kUnautorice, "655522555");<br>
+					<br>
+					iClient->Login(klogin8, kpsw8);<br>
+					iClient->Authorize(kAutorice);<br>
+					<br>
+					TBuf8<1024> aResponse;<br>
+					aResponse = iClient->Locate(kLocate);<br>
+					<br>
+					TRAPD(err, iAppView->AddToOutputWindowL(aResponse));<br>
+					if(err)<br>
+						Panic(EClientView);<br>
+					
+					iClient->Unauthorize(kUnautorice);<br>
+					iClient->Logout();<br>
+					</td>
+				</tr>
+			</table>
+		</center>
+		
+	</div>
+</div>
+</body>
+</html>

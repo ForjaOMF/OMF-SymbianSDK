@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>SendAutoWP</h3>
+
+		Sends a WapPush message to the user's own number<br><br>
+
+		<font face="Courier New">TBuf8<1024> SendAutoWP(const TDesC8& aLogin, const TDesC8& aPwd, const TDesC8& aURL, const TDesC8& aText);</font><br><br>
+
+		<b>Parameters</b><br>
+		<i>aLogin</i><br>
+		&nbsp;&nbsp;String with user's telephone number<br><br>
+		<i>aPwd</i><br>
+		&nbsp;&nbsp;String with user's password<br><br>
+		<i>aURL</i><br>
+		&nbsp;&nbsp;String with message URL<br><br>
+		<i>aText</i><br>
+		&nbsp;&nbsp;String with message text<br><br>
+
+		<b>Return</b><br>
+		Code received from service
+		<ul>
+			<li>0 - OK</li>
+			<li>1 - Invalid user format</li>
+			<li>2 - Invalid URL</li>
+			<li>3 - Invalid pasword format</li>
+			<li>4 - Access denied</li>
+			<li>5 - User is not registered</li>
+			<li>6 - Invalid password</li>
+			<li>7 - User registration expired</li>
+			<li>8 - Text format invalid</li>
+			<li>9 - Communication not established</li>
+			<li>-1 - Request error, missing or mistyped parameter</li>
+		</ul>
+
+	</div>
+</div>
+</body>
+</html>

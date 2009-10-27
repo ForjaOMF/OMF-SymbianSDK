@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h2>Auto WapPush</h2>
+		A sample application that allows you to send a WapPush notification to your own mobile phone. It demonstrates:
+		<ul>
+			<li>Auto WapPush API</li>
+		</ul>
+		<center>
+			<table width=200 height=50 bgcolor="#ffd760">
+				<tr>
+					<td align=center><font color="#dd8f52"><a href="../../samples/AutoWPExample.zip">Download Sample</a></font></td>
+				</tr>
+			</table>
+		</center>
+		<br><br>
+		
+		In the src/ClientAppUI.cpp you would find the following lines than are the parameters for the WapPush example,
+		 you can change the parameters at your will.<br><br>
+		<center>
+			<table bgcolor="#ffd760">
+				<tr>
+					<td align=left>
+					// call to send message<br>
+					_LIT8(klogin8, "user");<br>
+					_LIT8(kpsw8, "password");<br>
+					_LIT8(kulr8, "http://www.google.com");<br>
+					_LIT8(ktext8, "hello world");<br>
+					<br>
+					aResponse = iClient->SendAutoWP(klogin8, kpsw8, kulr8, ktext8);<br>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</div>
+</div>
+</body>
+</html>

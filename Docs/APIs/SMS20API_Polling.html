@@ -1,0 +1,38 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>Polling</h3>
+
+		Wait for a response of the SMS 2.0 platform<br><br>
+
+		<font face="Courier New">HBufC8* Polling();</font><br><br>
+
+		<b>Parameters</b><br>
+		<i>-</i><br>
+
+		<b>Return</b><br>
+		A string with the body of the response from the server, its can have 4 formats<br>
+		<ul>
+			<li>An empty string - no body in the response</li><br>
+			<li>A phone number - in example "629558855", is the phone number of a contact than requires your authoritation</li><br>
+			<li>A phone number | mesaje - in example "629558855 | hello world", the phone number of a contact than send you a message, and the message</li><br>
+			<li>A string than begin with "<" - this is a presence notification from the server, it has to be interpreted with the <i>GetPresenceList</i> function</li><br>
+		
+	</div>
+</div>
+</body>
+</html>

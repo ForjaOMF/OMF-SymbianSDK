@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h2>SMS 2.0</h2>
+		A sample application that allows you to keep a IM session with the SMS 2.0 platform through an HTTP interface. It demonstrates:
+		<ul>
+			<li>SMS Send API</li>
+		</ul>
+		<center>
+			<table width=200 height=50 bgcolor="#ffd760">
+				<tr>
+					<td align=center><font color="#dd8f52"><a href="../../samples/SMS20Example.zip">Download Sample</a></font></td>
+				</tr>
+			</table>
+		</center>
+		<br><br>
+		
+		In the src/ClientAppUI.cpp you would find the following lines than are the parameters for the sms 2.0 example,
+		 you can change the parameters at your will.<br><br>
+		<center>
+			<table bgcolor="#ffd760">
+				<tr>
+					<td align=left>
+					// SMS20 constants<br>
+					_LIT8(klogin8, "669554455");<br>
+					_LIT8(kpsw8, "1234");<br>
+					_LIT8(kAlias, "myself");<br>
+					<br>
+					_LIT8(kconntact, "669553355");<br>
+					_LIT8(kmsg, "hello world");<br>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</div>
+</div>
+</body>
+</html>

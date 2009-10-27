@@ -1,0 +1,47 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../Style.css">
+	<title>Open movilforum Symbian SDK</title>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1><a href="http://open.movilforum.com"></a></h1>
+	</div>
+
+	<div id="sidebar">
+		<iframe src ="../Sidebar.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h3>SendMessage</h3>
+
+		Make an HTTP transaction to send a SMS.<br><br>
+
+		<font face="Courier New">TBuf8<1024> SendMessage(const TDesC8& aLogin, const TDesC8& aPwd, const TDesC8& aDest, const TDesC8& aMsg);</font><br><br>
+
+		<b>Parameters</b><br>
+		<i>aLogin</i><br>
+		&nbsp;&nbsp;String with sender's telephone number<br><br>
+		<i>aPwd</i><br>
+		&nbsp;&nbsp;String with sender's password<br><br>
+		<i>aDest</i><br>
+		&nbsp;&nbsp;String with destination telephone number<br><br>
+		<i>aMsg</i><br>
+		&nbsp;&nbsp;String with message text<br><br>
+
+		<b>Return</b><br>
+		If the message is correctly sent, OK<br><br>
+		else
+		<ul>
+			<li>1 - Incorrect user</li>
+			<li>4 - Service unavaliable</li>
+			<li>5 - Incorrect password</li>
+			<li>11 - Incorrect destination</li>
+			<li>12 - Destinatation not specified</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
